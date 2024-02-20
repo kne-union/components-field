@@ -1,0 +1,5 @@
+.row-disabled {
+  &:global(.ant-table-row .ant-table-cell) {
+    color: var(--font-color-grey-2) !important;
+  }
+}
