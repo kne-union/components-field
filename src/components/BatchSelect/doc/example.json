@@ -1,0 +1,51 @@
+{
+  "isFull": false,
+  "list": [
+    {
+      "title": "这里填写示例标题",
+      "description": "这里填写示例说明",
+      "code": "./base.js",
+      "scope": [
+        {
+          "name": "_BatchSelect",
+          "packageName": "@components/BatchSelect"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        },
+        {
+          "name": "_SelectModal",
+          "packageName": "@components/SelectModal"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
+    },
+    {
+      "title": "不展示新增和批量删除按钮",
+      "description": "这里填写示例说明",
+      "code": "./baseNoButton.js",
+      "scope": [
+        {
+          "name": "_BatchSelect",
+          "packageName": "@components/BatchSelect"
+        },
+        {
+          "name": "remoteLoader",
+          "packageName": "@kne/remote-loader"
+        },
+        {
+          "name": "_SelectModal",
+          "packageName": "@components/SelectModal"
+        },
+        {
+          "name": "lodash",
+          "packageName": "lodash"
+        }
+      ]
+    }
+  ]
+}
