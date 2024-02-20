@@ -1,5 +1,5 @@
 {
-  "name": "components-field",
+  "name": "@kne-components/components-field",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=3001 MODULES_DEV_PUBLIC_URL=/ craco start",
-    "build": "cross-env COMPONENTS_NAME=components-name MODULES_DEV_PUBLIC_URL=/components-name  craco build",
+    "build": "cross-env COMPONENTS_NAME=components-field MODULES_DEV_PUBLIC_URL=/components-field  craco build",
     "test": "craco test --coverage",
     "eject": "react-scripts eject",
     "init": "npm i --legacy-peer-deps",
