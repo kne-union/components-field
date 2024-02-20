@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/2.3612a367.chunk.css","mappings":"AAAA,gEAEI,wCAA0C","sources":["components/SelectModal/style.module.scss"],"sourcesContent":[".row-disabled {\n  &:global(.ant-table-row .ant-table-cell) {\n    color: var(--font-color-grey-2) !important;\n  }\n}\n"],"names":[],"sourceRoot":""}
