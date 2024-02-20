@@ -1,6 +1,6 @@
 {
   "name": "@kne-components/components-field",
-  "version": "0.1.0",
+  "version": "0.1.1-alpha.1",
   "dependencies": {
     "@kne/use-control-value": "^0.1.8",
     "react": "^18.2.0",
