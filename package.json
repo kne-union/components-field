@@ -15,10 +15,9 @@
     "build": "cross-env COMPONENTS_NAME=components-field MODULES_DEV_PUBLIC_URL=/components-field craco build",
     "test": "craco test --coverage",
     "eject": "react-scripts eject",
-    "init": "npm i --legacy-peer-deps",
+    "init": "husky && npm i --legacy-peer-deps",
     "create": "modules-dev-create",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "lint-staged": "lint-staged"
   },
   "eslintConfig": {
     "extends": [
