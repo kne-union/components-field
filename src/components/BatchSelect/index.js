@@ -6,10 +6,9 @@ import { useState } from 'react';
 import style from './style.module.scss';
 
 const BatchSelectField = createWithRemoteLoader({
-  modules: ['ConfirmButton', 'Icon', 'Table', 'Modal@useConfirmModal']
+  modules: ['components-core:ConfirmButton', 'components-core:Icon', 'components-core:Table']
 })(({ remoteModules, className, onAdd, disabled, minLength, showAdd, showBatchDelete, showDelete, showRowSelection, ...props }) => {
-  const [ConfirmButton, Icon, TablePage, useConfirmModal] = remoteModules;
-  const confirmModal = useConfirmModal();
+  const [ConfirmButton, Icon, TablePage] = remoteModules;
 
   const [value, setValue] = useControlValue(props);
   const [selectedKeys, setSelectedKeys] = useState([]);
@@ -27,32 +26,24 @@ const BatchSelectField = createWithRemoteLoader({
                 valueOf: item => [
                   {
                     children: '删除',
+                    confirm: true,
                     onClick: () => {
-                      confirmModal({
-                        type: 'confirm',
-                        title: '取消发布',
-                        message: '确定取消发布吗？',
-                        okText: '确认',
-                        cancelText: '取消',
-                        onOk: () => {
-                          const itemKey = typeof props.rowKey === 'function' ? props.rowKey(item) : item[props.rowKey];
-                          setValue(value => {
-                            const newValue = value.slice(0);
-                            const index = newValue.findIndex(target => (typeof props.rowKey === 'function' ? props.rowKey(target) : target[props.rowKey] === itemKey));
-                            if (index > -1) {
-                              newValue.splice(index, 1);
-                            }
-                            return newValue;
-                          });
-                          setSelectedKeys(keys => {
-                            const newKeys = keys.slice(0);
-                            const index = newKeys.indexOf(itemKey);
-                            if (index > -1) {
-                              newKeys.splice(index, 1);
-                            }
-                            return newKeys;
-                          });
+                      const itemKey = typeof props.rowKey === 'function' ? props.rowKey(item) : item[props.rowKey];
+                      setValue(value => {
+                        const newValue = value.slice(0);
+                        const index = newValue.findIndex(target => (typeof props.rowKey === 'function' ? props.rowKey(target) : target[props.rowKey] === itemKey));
+                        if (index > -1) {
+                          newValue.splice(index, 1);
                         }
+                        return newValue;
+                      });
+                      setSelectedKeys(keys => {
+                        const newKeys = keys.slice(0);
+                        const index = newKeys.indexOf(itemKey);
+                        if (index > -1) {
+                          newKeys.splice(index, 1);
+                        }
+                        return newKeys;
                       });
                     }
                   }
