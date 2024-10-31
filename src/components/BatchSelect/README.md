@@ -1,8 +1,11 @@
+
 # BatchSelect
+
 
 ### 概述
 
 用于批量选择一些对象
+
 
 ### 示例
 
@@ -10,7 +13,7 @@
 
 - 这里填写示例标题
 - 这里填写示例说明
-- \_BatchSelect(@components/BatchSelect),remoteLoader(@kne/remote-loader),\_SelectModal(@components/SelectModal),lodash(lodash)
+- _BatchSelect(@components/BatchSelect),remoteLoader(@kne/remote-loader),_SelectModal(@components/SelectModal),lodash(lodash)
 
 ```jsx
 const { default: BatchSelect } = _BatchSelect;
@@ -98,11 +101,12 @@ const BaseExample = createWithRemoteLoader({
 });
 
 render(<BaseExample />);
+
 ```
 
 - 不展示新增和批量删除按钮
 - 这里填写示例说明
-- \_BatchSelect(@components/BatchSelect),remoteLoader(@kne/remote-loader),\_SelectModal(@components/SelectModal),lodash(lodash)
+- _BatchSelect(@components/BatchSelect),remoteLoader(@kne/remote-loader),_SelectModal(@components/SelectModal),lodash(lodash)
 
 ```jsx
 const { default: BatchSelect } = _BatchSelect;
@@ -130,6 +134,7 @@ const BaseExample = createWithRemoteLoader({
         rule="REQ"
         showBatchDelete={false}
         showRowSelection={false}
+        showDelete={false}
         showAdd={false}
         minLength={1}
         columns={[
@@ -152,9 +157,12 @@ const BaseExample = createWithRemoteLoader({
 });
 
 render(<BaseExample />);
+
 ```
+
 
 ### API
 
 | 属性名 | 说明 | 类型 | 默认值 |
 | ------ | ---- | ---- | ------ |
+

@@ -23,6 +23,7 @@ const BaseExample = createWithRemoteLoader({
         rule="REQ"
         showBatchDelete={false}
         showRowSelection={false}
+        showDelete={false}
         showAdd={false}
         minLength={1}
         columns={[
