@@ -3,3 +3,9 @@
     color: var(--font-color-grey-2) !important;
   }
 }
+
+.selected-tag {
+  overflow: hidden;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
