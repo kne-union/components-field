@@ -129,6 +129,7 @@ const ModalInner = createWithRemoteLoader({
                 .filter(item => !searchText || (typeof labelKey === 'function' ? labelKey(item) : item[labelKey]).indexOf(searchText) > -1)
                 .map(item => (
                   <Tag
+                    className={style['selected-tag']}
                     closable
                     onClose={() => {
                       setValue(value => {
